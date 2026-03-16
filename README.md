@@ -174,15 +174,16 @@ O objetivo não é construir dashboards complexos, mas facilitar a consulta dos 
 
 ## 📂 Estrutura do Projeto
 
-├── 01.bronze/          # Notebooks de ingestão raw 
-├── 02.silver/          # Notebooks de limpeza e modelagem 
-├── 03.gold/            # Notebooks de KPIs e tabelas finais
-├── app/                # Aplicação Streamlit (Visualização)
-│   ├── main.py         # Interface do Dashboard
-│   └── database.py     # Lógica de conexão com Databricks SQL
-├── Dockerfile          # Definição da imagem da aplicação
-├── docker-compose.yml  # Orquestração do ambiente local
-└── pyproject.toml      # Gerenciamento de dependências via UV
+project_data_football/  
+├── 01.bronze/          # Notebooks de ingestão raw  
+├── 02.silver/          # Notebooks de limpeza e modelagem  
+├── 03.gold/            # Notebooks de KPIs e tabelas finais  
+├── app/                # Aplicação Streamlit (Visualização)  
+│   ├── main.py         # Interface do Dashboard  
+│   └── database.py     # Lógica de conexão com Databricks SQL  
+├── Dockerfile          # Definição da imagem da aplicação  
+├── docker-compose.yml  # Orquestração do ambiente local  
+└── pyproject.toml      # Gerenciamento de dependências via UV  
 
 ---
 
