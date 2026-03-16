@@ -1,13 +1,14 @@
-[project]
+[tool.poetry]
 name = "project-data-football"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.10,<4.0"
-dependencies = [
-    "databricks-sql-connector>=4.2.5",
-    "pandas>=2.3.3",
-    "plotly>=6.6.0",
-    "python-dotenv>=1.2.2",
-    "streamlit>=1.55.0",
-]
+description = "Projeto de Engenharia de Dados - Cartola FC"
+authors = ["Miguel"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+streamlit = "^1.55.0"
+databricks-sql-connector = "^4.2.5"
+pandas = "^2.3.3"
+plotly = "^6.6.0"
+python-dotenv = "^1.2.2"
