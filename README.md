@@ -137,7 +137,7 @@ Contém métricas como:
 
 ---
 
-# 🧰 Tecnologias Utilizadas
+## 🧰 Tecnologias Utilizadas
 
 - Python
 - PySpark
@@ -148,7 +148,7 @@ Contém métricas como:
 
 ---
 
-# 📥 Fonte de Dados
+## 📥 Fonte de Dados
 
 Os dados são coletados da API pública do Cartola FC:
 
@@ -156,7 +156,7 @@ https://api.cartola.globo.com/partidas
 
 ---
 
-# ⚙️ Ambiente de Execução
+## ⚙️ Ambiente de Execução
 
 O pipeline de dados deste projeto foi desenvolvido para execução em ambiente **Databricks**, utilizando notebooks PySpark organizados nas camadas da arquitetura Medallion (Bronze, Silver e Gold).
 
@@ -166,13 +166,14 @@ Devido à dependência de infraestrutura específica (Databricks Workspace, Jobs
 
 ---
 
-📊 Visualização com Streamlit
+## 📊 Visualização com Streamlit
 
 O projeto inclui uma aplicação Streamlit utilizada apenas para visualizar as tabelas da camada Gold.
 
 O objetivo não é construir dashboards complexos, mas facilitar a consulta dos resultados gerados pelo pipeline de dados.
 
-📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
+
 ├── 01.bronze/          # Notebooks de ingestão raw
 ├── 02.silver/          # Notebooks de limpeza e modelagem
 ├── 03.gold/            # Notebooks de KPIs e tabelas finais
@@ -185,8 +186,10 @@ O objetivo não é construir dashboards complexos, mas facilitar a consulta dos 
 
 ---
 
-👨‍💻 Autor
+## 👨‍💻 Autor
 
 Miguel Ernandes Dias Lucena
 
 Projeto desenvolvido para prática de conceitos de Engenharia de Dados, incluindo ingestão de APIs, processamento distribuído com Spark, modelagem dimensional e pipelines de dados.
+
+<img width="1910" height="927" alt="Captura de tela 2026-02-27 190545" src="https://github.com/user-attachments/assets/c6e7b049-c85e-4862-8d73-8dc52043e967" />
