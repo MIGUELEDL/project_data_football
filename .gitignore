@@ -7,7 +7,6 @@ uv.lock
 
 # Environment & Credentials
 .env
-.databricks/
 
 # Docker
 .docker/
