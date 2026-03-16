@@ -174,8 +174,8 @@ O objetivo não é construir dashboards complexos, mas facilitar a consulta dos 
 
 ## 📂 Estrutura do Projeto
 
-├── 01.bronze/          # Notebooks de ingestão raw
-├── 02.silver/          # Notebooks de limpeza e modelagem
+├── 01.bronze/          # Notebooks de ingestão raw 
+├── 02.silver/          # Notebooks de limpeza e modelagem 
 ├── 03.gold/            # Notebooks de KPIs e tabelas finais
 ├── app/                # Aplicação Streamlit (Visualização)
 │   ├── main.py         # Interface do Dashboard
@@ -192,4 +192,5 @@ Miguel Ernandes Dias Lucena
 
 Projeto desenvolvido para prática de conceitos de Engenharia de Dados, incluindo ingestão de APIs, processamento distribuído com Spark, modelagem dimensional e pipelines de dados.
 
-<img width="1910" height="927" alt="Captura de tela 2026-02-27 190545" src="https://github.com/user-attachments/assets/c6e7b049-c85e-4862-8d73-8dc52043e967" />
+<img width="1910" height="919" alt="Captura de tela 2026-03-03 041657" src="https://github.com/user-attachments/assets/9b9014c9-66f9-46a1-896a-f3e2a133d682" />
+
