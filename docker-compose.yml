@@ -7,29 +7,12 @@ services:
       - .env
     volumes:
       - ./app:/app/app  # Permite Hot Reload (edita no VS Code e atualiza no browser)
-
-  minio:
-    image: minio/minio
-    container_name: minio
-    command: server /data --console-address ":9001"
-    ports:
-      - "9000:9000"
-      - "9001:9001"
-    environment:
-      MINIO_ROOT_USER: admin
-      MINIO_ROOT_PASSWORD: admin123
-    volumes:
-      - minio_data:/data
-
+      
+  # landing
   ingestion:
-    build: 
+    build:
       context: .
       dockerfile: ingestion/Dockerfile
     container_name: ingestion_data_football
-    depends_on:
-      - minio
     env_file:
       - .env
-
-volumes:
-  minio_data:
