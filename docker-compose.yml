@@ -7,12 +7,3 @@ services:
       - .env
     volumes:
       - ./app:/app/app  # Permite Hot Reload (edita no VS Code e atualiza no browser)
-      
-  # landing
-  ingestion:
-    build:
-      context: .
-      dockerfile: ingestion/Dockerfile
-    container_name: ingestion_data_football
-    env_file:
-      - .env
