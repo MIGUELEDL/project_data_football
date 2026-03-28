@@ -196,7 +196,8 @@ O objetivo não é construir dashboards complexos, mas facilitar a consulta dos 
 ## 📂 Estrutura do Projeto
 
 project_data_football/  
-├── 01.bronze/          # Notebooks de ingestão raw  
+├── 00.raw/             # Ingestão da API → JSON bruto
+├── 01.bronze/          # Leitura da raw e carga em Delta  
 ├── 02.silver/          # Notebooks de limpeza e modelagem  
 ├── 03.gold/            # Notebooks de KPIs e tabelas finais  
 ├── app/                # Aplicação Streamlit (Visualização)  
