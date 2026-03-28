@@ -17,12 +17,24 @@ O pipeline segue o padrão **Medallion Architecture (Bronze → Silver → Gold)
                               │
                               ▼
                      ┌─────────────────┐
-                     │   Bronze Layer   │
-                     │  Ingestão Raw    │
+                     │  Landing Layer   │
+                     │   Raw (JSON)     │
                      │                  │
                      │ - partidas       │
                      │ - pontuações     │
                      │ - mercado        │
+                     │                  │
+                     │ JSON (bruto)     │
+                     └────────┬─────────┘
+                              │
+                              ▼
+                     ┌─────────────────┐
+                     │   Bronze Layer   │
+                     │  Ingestão Raw    │
+                     │                  │
+                     │ - leitura JSON   │
+                     │ - merge/upsert   │
+                     │ - incremental    │
                      │                  │
                      │ Delta Lake       │
                      └────────┬─────────┘
@@ -55,14 +67,23 @@ O pipeline segue o padrão **Medallion Architecture (Bronze → Silver → Gold)
                      │ das tabelas      │
                      │ analíticas       │
                      └─────────────────┘
-    
-### Bronze
-Camada de ingestão de dados brutos da API.
+### Raw 
+Camada responsável pela ingestão inicial dos dados da API e armazenamento bruto.
 
-- ingestão via API REST
-- persistência em **Delta Lake**
-- controle de duplicidade com **MERGE**
-- ingestão incremental por rodada
+ingestão via API REST
+persistência em arquivos JSON (raw)
+versionamento por timestamp
+dados armazenados sem transformação
+
+Essa camada garante que os dados originais da API sejam preservados, permitindo reprocessamento e rastreabilidade.
+
+### Bronze
+Camada de ingestão e padronização dos dados a partir da Raw.
+
+leitura dos arquivos JSON da Landing
+persistência em Delta Lake
+controle de duplicidade com MERGE
+ingestão incremental por rodada
 
 ### Silver
 Camada responsável por tratamento e modelagem.
