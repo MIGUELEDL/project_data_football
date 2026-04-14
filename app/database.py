@@ -46,9 +46,9 @@ def query_gold_table(query_sql):
             return pd.DataFrame(result, columns=column_names)
             
     except Exception as e:
-        # Log de erro caso a conexão ou a query falhem
-        print(f"❌ Erro na conexão/query: {e}")
-        # Retorna um DataFrame vazio para não quebrar a interface do Streamlit
+        # Em vez de apenas printar no console, vamos subir o erro para o Streamlit
+        import streamlit as st
+        st.error(f"Erro detalhado: {e}") 
         return pd.DataFrame()
         
     finally:
